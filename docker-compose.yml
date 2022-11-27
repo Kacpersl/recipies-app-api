@@ -12,12 +12,13 @@ services:
       - ./app:/app
     command: >
       sh -c "python manage.py runserver 0.0.0.0:3000"
-    
+    # Enviroments variables project wide 
     environment:
       - DB_HOST=db
       - POSTRGES_DB=devdb
       - POSTRGES_USER=devuser
       - POSTGRES_PASSWORD=password
+    # APP wont start unless database is up firstly
     depends_on:
       - db
     
