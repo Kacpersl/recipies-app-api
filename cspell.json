@@ -1,0 +1,9 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": ["psycopg2", "DOCKERHUB",],
+    "ignoreWords": [],
+    "import": []
+}
