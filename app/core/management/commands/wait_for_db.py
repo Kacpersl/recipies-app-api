@@ -1,7 +1,7 @@
 """
 Command to wait for the database to be available
 """
-from psycopg2 import OperationalError as Psycopg2Error # type: ignore
+from psycopg2 import OperationalError as Psycopg2Error  # type: ignore
 import time
 
 from django.db.utils import OperationalError

@@ -9,8 +9,8 @@ class ModelTests(TestCase):
 
     def test_create_user_model_with_email_successful(self):
         """Creating a user with an email is successful"""
-        email="test@example.com"
-        password="password123"
+        email = "test@example.com"
+        password = "password123"
 
         user = get_user_model().objects.create_user(
             email=email,
@@ -31,6 +31,7 @@ class ModelTests(TestCase):
 
             user = get_user_model().objects.create_user(email, 'sample543')
             self.assertAlmostEqual(user.email, expected)
+
     def test_new_user_without_email_raises_error(self):
         """Test that creating a user without email raises error"""
         with self.assertRaises(ValueError):
