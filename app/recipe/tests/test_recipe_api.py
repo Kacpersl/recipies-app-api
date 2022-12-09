@@ -13,7 +13,7 @@ from recipe.serializers import RecipeSerializer
 
 RECIPES_URL = reverse('recipe:recipe-list')
 
-def create_recipe(self, **params):
+def create_recipe(user, **params):
     """create and return recipe"""
     defaults = {
         'title': 'Sample recipe',
@@ -25,6 +25,7 @@ def create_recipe(self, **params):
     defaults.update(params)
 
     recipe = Recipe.objects.create(user=user, **defaults)
+    return recipe
 
 
 class PublicRecipeAPITests(TestCase):
