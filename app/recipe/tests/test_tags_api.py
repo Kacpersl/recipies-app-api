@@ -16,7 +16,7 @@ TAGS_URL = reverse('recipe:tag-list')
 
 def create_user(email='example@example.com', password='pass123'):
     """create and return a user."""
-    return get_user_model().objects,create_user(email=email, password=password)
+    return get_user_model().objects.create_user(email=email, password=password)
 
 class PublicTagsApiTests(TestCase):
     """test unauthenticated api request"""
